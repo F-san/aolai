@@ -1,0 +1,82 @@
+html,body{
+    width: 100%;
+    height: 100%;
+}
+body{
+    font-family: '微软雅黑';
+    font-size: 12px;
+}
+
+body,ul,li,dl,dt,dd,p,ol,h1,h2,h3,h4,h5,h6,form,img,table,fieldset,legend,figure,figcaption{
+    margin: 0;
+    padding: 0;
+}
+
+/* 取消列表符号 */
+ul,li,ol{
+    list-style: none;
+}
+
+/* 取消下划线 */
+a{
+    text-decoration: none;
+    color: #333;
+
+    outline: none;
+}
+
+/* 取消加粗 */
+h1,h2,h3,h4,h5,h6,strong,b{
+    font-weight: normal;
+}
+
+/* 取消倾斜 */
+em,i{
+    font-style: normal;
+}
+
+/* 解决图片3px */
+img{
+    display: block;
+}
+
+/* 取消按钮边框 */
+input,button{
+    border: none;
+    background: none;
+    /* 取消默认点击边框 */
+    outline: none;
+}
+
+/* 解决高度塌陷 */
+.clean:after{
+    content:'.';
+    display: block;
+    clear: both;
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
+}
+/* 低版本兼容 */
+.clean{
+    zoom:1;
+}
+
+/* 去掉number箭头 */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+input[type="number"]{
+    -moz-appearance: textfield;
+}
+
+/* 左浮动 */
+.fl{
+    float: left;
+}
+
+/* 右浮动 */
+.fr{
+    float: right;                                          
+}

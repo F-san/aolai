@@ -1,0 +1,128 @@
+{
+  "id": "",
+  "name": "",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "855475",
+      "name": "脚丫",
+      "font_class": "jiaoya",
+      "unicode": "e694",
+      "unicode_decimal": 59028
+    },
+    {
+      "icon_id": "3818293",
+      "name": "微信",
+      "font_class": "weixin",
+      "unicode": "e652",
+      "unicode_decimal": 58962
+    },
+    {
+      "icon_id": "5173238",
+      "name": "正",
+      "font_class": "zheng",
+      "unicode": "e73c",
+      "unicode_decimal": 59196
+    },
+    {
+      "icon_id": "5769997",
+      "name": "用户",
+      "font_class": "user",
+      "unicode": "e502",
+      "unicode_decimal": 58626
+    },
+    {
+      "icon_id": "6561034",
+      "name": "上箭头",
+      "font_class": "arrow-top",
+      "unicode": "e519",
+      "unicode_decimal": 58649
+    },
+    {
+      "icon_id": "6669552",
+      "name": "qq",
+      "font_class": "qq",
+      "unicode": "e60d",
+      "unicode_decimal": 58893
+    },
+    {
+      "icon_id": "8150444",
+      "name": "购物车空",
+      "font_class": "gouwuche",
+      "unicode": "e505",
+      "unicode_decimal": 58629
+    },
+    {
+      "icon_id": "8956379",
+      "name": "服务评价-客服",
+      "font_class": "kefu3",
+      "unicode": "e506",
+      "unicode_decimal": 58630
+    },
+    {
+      "icon_id": "8989922",
+      "name": "个人中心",
+      "font_class": "ren",
+      "unicode": "e511",
+      "unicode_decimal": 58641
+    },
+    {
+      "icon_id": "10743129",
+      "name": "钱",
+      "font_class": "qian",
+      "unicode": "e60e",
+      "unicode_decimal": 58894
+    },
+    {
+      "icon_id": "11037504",
+      "name": "二维码",
+      "font_class": "erweima",
+      "unicode": "e63b",
+      "unicode_decimal": 58939
+    },
+    {
+      "icon_id": "11796467",
+      "name": "微博",
+      "font_class": "weibo",
+      "unicode": "e70f",
+      "unicode_decimal": 59151
+    },
+    {
+      "icon_id": "13761520",
+      "name": "微信",
+      "font_class": "weixin1",
+      "unicode": "e60f",
+      "unicode_decimal": 58895
+    },
+    {
+      "icon_id": "13955589",
+      "name": "手机",
+      "font_class": "shouji",
+      "unicode": "e664",
+      "unicode_decimal": 58980
+    },
+    {
+      "icon_id": "14027012",
+      "name": "购物车",
+      "font_class": "che-copy",
+      "unicode": "e609",
+      "unicode_decimal": 58889
+    },
+    {
+      "icon_id": "14082153",
+      "name": "心 爱心",
+      "font_class": "heart",
+      "unicode": "e52d",
+      "unicode_decimal": 58669
+    },
+    {
+      "icon_id": "18076609",
+      "name": "密 码",
+      "font_class": "mima",
+      "unicode": "e521",
+      "unicode_decimal": 58657
+    }
+  ]
+}
