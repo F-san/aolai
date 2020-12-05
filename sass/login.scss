@@ -1,0 +1,111 @@
+$main-c:#c81417;
+$font-c:#D0D0D0;
+
+.log-form-box {
+    width: 350px;
+    border: 1px solid $font-c;
+    margin-top: 75px;
+    background: #fff;
+    font-family: "宋体";
+    position: relative;
+
+    .qrc {
+        width: 50px;
+        height: 50px;
+        font-size: 50px;
+        color: $main-c;
+        position: absolute;
+        right: 0;
+    }
+
+    .log-form-top {
+        padding-left: 20px;
+        line-height: 50px;
+        font-size: 13px;
+
+        a {
+            color: #FF7800;
+
+            &:hover {
+                color: $main-c;
+            }
+        }
+    }
+
+    .log-form-main {
+        width: 240px;
+        margin: auto;
+
+
+        .log-ipt {
+            width: 100%;
+            border-radius: 10px;
+            line-height: 40px;
+            height: 40px;
+            border: 1px solid $font-c;
+
+            span {
+                display: inline-block;
+                margin: 0 15px;
+                color: $font-c;
+            }
+        }
+
+        p {
+            font-size: 12px;
+            line-height: 30px;
+        }
+
+        .log-remb {
+            width: 100%;
+            margin-top: 30px;
+            color: $font-c;
+
+            input {
+                display: inline-block;
+                vertical-align: middle;
+                margin-right: 10px;
+            }
+
+            a {
+                color: $font-c;
+                float: right;
+
+                &:hover {
+                    color: $main-c;
+                }
+            }
+        }
+
+        button {
+            width: 100%;
+            background: $main-c;
+            border-radius: 5px;
+            text-align: center;
+            color: #fff;
+            line-height: 40px;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+
+        .social-log {
+            text-align: center;
+
+            span {
+                cursor: pointer;
+
+                &:first-child {
+                    font-size: 50px;
+                    vertical-align: middle;
+                    color: #55abe3;
+                }
+
+                &:nth-child(2) {
+                    font-size: 45px;
+                    vertical-align: middle;
+                    color: #11cd6d;
+                }
+            }
+        }
+    }
+}
