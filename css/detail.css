@@ -1,0 +1,116 @@
+.detail-container {
+  width: 1200px;
+  margin: auto; }
+  .detail-container .detail-top {
+    text-align: left;
+    line-height: 45px; }
+    .detail-container .detail-top a {
+      font-size: 12px; }
+      .detail-container .detail-top a:hover {
+        color: #ff3344; }
+  .detail-container .detail-main {
+    border: 1px solid #e6e6e6; }
+    .detail-container .detail-main .detail-main-l {
+      float: left;
+      width: 480px; }
+      .detail-container .detail-main .detail-main-l .detail-main-l-list {
+        height: 420px;
+        float: left;
+        margin-right: 15px; }
+        .detail-container .detail-main .detail-main-l .detail-main-l-list ul {
+          width: 62px; }
+          .detail-container .detail-main .detail-main-l .detail-main-l-list ul li {
+            margin-top: 10px; }
+          .detail-container .detail-main .detail-main-l .detail-main-l-list ul img {
+            width: 62px;
+            height: 62px; }
+      .detail-container .detail-main .detail-main-l .detail-main-l-spic {
+        float: left;
+        width: 400px;
+        height: 400px;
+        background-color: darkgoldenrod;
+        position: relative; }
+        .detail-container .detail-main .detail-main-l .detail-main-l-spic .detail-main-l-zoom {
+          position: absolute;
+          width: 200px;
+          height: 200px;
+          background-color: darkcyan;
+          opacity: .5; }
+        .detail-container .detail-main .detail-main-l .detail-main-l-spic .detail-main-l-bpic {
+          position: absolute;
+          width: 400px;
+          height: 400px;
+          background-color: darkgrey;
+          left: 400px;
+          display: none; }
+    .detail-container .detail-main .detail-main-m {
+      float: left;
+      width: 500px;
+      margin: 0 5px; }
+      .detail-container .detail-main .detail-main-m .detail-prcie {
+        width: 480px;
+        background: #f7f7f7;
+        margin-top: 10px;
+        padding: 10px 10px; }
+        .detail-container .detail-main .detail-main-m .detail-prcie span:nth-child(1) {
+          line-height: 30px;
+          font-size: 12px;
+          color: #000; }
+        .detail-container .detail-main .detail-main-m .detail-prcie span:nth-child(2) {
+          font-size: 22px;
+          color: #c81417;
+          font-weight: bold; }
+      .detail-container .detail-main .detail-main-m .detail-choice {
+        width: 100%; }
+        .detail-container .detail-main .detail-main-m .detail-choice ul {
+          margin-top: 10px; }
+        .detail-container .detail-main .detail-main-m .detail-choice li {
+          display: inline-block;
+          line-height: 38px; }
+      .detail-container .detail-main .detail-main-m .datail-num {
+        width: 100%;
+        margin-top: 10px; }
+        .detail-container .detail-main .detail-main-m .datail-num li {
+          display: inline-block;
+          vertical-align: top; }
+        .detail-container .detail-main .detail-main-m .datail-num .datail-num-choice1 {
+          width: 60px; }
+        .detail-container .detail-main .detail-main-m .datail-num .datail-num-choice2 {
+          width: 62px;
+          height: 40px;
+          border: 1px solid #cccccc; }
+          .detail-container .detail-main .detail-main-m .datail-num .datail-num-choice2 .datail-num-ipt {
+            height: 100%; }
+            .detail-container .detail-main .detail-main-m .datail-num .datail-num-choice2 .datail-num-ipt input {
+              width: 30px;
+              line-height: 38px; }
+          .detail-container .detail-main .detail-main-m .datail-num .datail-num-choice2 .datail-num-change {
+            border-left: 1px solid #cccccc;
+            width: 24px;
+            height: 100%;
+            text-align: center; }
+            .detail-container .detail-main .detail-main-m .datail-num .datail-num-choice2 .datail-num-change .num-change-plus {
+              border-bottom: 1px solid #cccccc;
+              height: 19px;
+              line-height: 19px; }
+            .detail-container .detail-main .detail-main-m .datail-num .datail-num-choice2 .datail-num-change .num-change-plus:hover,
+            .detail-container .detail-main .detail-main-m .datail-num .datail-num-choice2 .datail-num-change .num-change-minus:hover {
+              color: #c81417;
+              cursor: pointer; }
+        .detail-container .detail-main .detail-main-m .datail-num .datail-num-addcart {
+          width: 140px;
+          height: 40px;
+          display: block;
+          color: #fff;
+          background: #ff3344;
+          text-align: center;
+          line-height: 40px;
+          font-weight: bold;
+          margin-left: 10px; }
+          .detail-container .detail-main .detail-main-m .datail-num .datail-num-addcart:hover {
+            background-color: #c81417;
+            cursor: pointer; }
+    .detail-container .detail-main .detail-main-m > p {
+      font-size: 14px;
+      color: #666;
+      width: 100%; }
