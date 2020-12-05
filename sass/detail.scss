@@ -1,0 +1,188 @@
+.detail-container {
+    width: 1200px;
+    margin: auto;
+
+    .detail-top {
+        text-align: left;
+        line-height: 45px;
+
+        a {
+            font-size: 12px;
+
+            &:hover {
+                color: #ff3344;
+            }
+        }
+    }
+
+    .detail-main {
+        border: 1px solid #e6e6e6;
+
+        .detail-main-l {
+            float: left;
+            width: 480px;
+
+            .detail-main-l-list {
+                height: 420px;
+                float: left;
+                margin-right: 15px;
+
+                ul {
+                    width: 62px;
+
+                    li {
+                        margin-top: 10px;
+
+                    }
+
+                    img {
+                        width: 62px;
+                        height: 62px;
+                    }
+                }
+            }
+
+            .detail-main-l-spic {
+                float: left;
+                width: 400px;
+                height: 400px;
+                background-color: darkgoldenrod;
+                position: relative;
+
+                .detail-main-l-zoom {
+                    position: absolute;
+                    width: 200px;
+                    height: 200px;
+                    background-color: darkcyan;
+                    opacity: .5;
+                }
+
+                .detail-main-l-bpic {
+                    position: absolute;
+                    width: 400px;
+                    height: 400px;
+                    background-color: darkgrey;
+                    left: 400px;
+                    display: none;
+                }
+            }
+        }
+
+        .detail-main-m {
+            float: left;
+            width: 500px;
+            margin: 0 5px;
+
+            .detail-prcie {
+                width: 480px;
+                background: #f7f7f7;
+                margin-top: 10px;
+                padding: 10px 10px;
+
+                span {
+                    &:nth-child(1) {
+                        line-height: 30px;
+                        font-size: 12px;
+                        color: #000;
+                    }
+
+                    &:nth-child(2) {
+                        font-size: 22px;
+                        color: #c81417;
+                        font-weight: bold;
+                    }
+                }
+            }
+
+            .detail-choice {
+                width: 100%;
+
+                ul {
+                    margin-top: 10px;
+
+                }
+
+                li {
+                    display: inline-block;
+                    line-height: 38px;
+                }
+            }
+
+            .datail-num {
+                width: 100%;
+                margin-top: 10px;
+
+                li {
+                    display: inline-block;
+                    vertical-align: top;
+                }
+
+                .datail-num-choice1 {
+                    width: 60px;
+                }
+
+                .datail-num-choice2 {
+                    width: 62px;
+                    height: 40px;
+                    border: 1px solid #cccccc;
+
+                    .datail-num-ipt {
+                        height: 100%;
+
+                        input {
+                            width: 30px;
+                            line-height: 38px;
+                        }
+                    }
+
+
+                    .datail-num-change {
+                        border-left: 1px solid #cccccc;
+                        width: 24px;
+                        height: 100%;
+                        text-align: center;
+
+                        .num-change-plus {
+                            border-bottom: 1px solid #cccccc;
+                            height: 19px;
+                            line-height: 19px;
+                        }
+
+                        .num-change-plus,
+                        .num-change-minus {
+                            &:hover {
+                                color: #c81417;
+                                cursor: pointer;
+                            }
+                        }
+                    }
+
+                }
+
+                .datail-num-addcart {
+                    width: 140px;
+                    height: 40px;
+                    display: block;
+                    color: #fff;
+                    background: #ff3344;
+                    text-align: center;
+                    line-height: 40px;
+                    font-weight: bold;
+                    margin-left: 10px;
+
+                    &:hover {
+                        background-color: #c81417;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+
+        .detail-main-m>p {
+            font-size: 14px;
+            color: #666;
+            width: 100%;
+        }
+
+    }
+}
