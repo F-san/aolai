@@ -64,6 +64,7 @@
           width: 30px; }
     .reg-form-box .reg-form-ipt p {
       width: 100%;
+      height: 30px;
       line-height: 30px;
       text-align: left;
       padding-left: 55px;
@@ -82,7 +83,8 @@
       margin: auto;
       margin-top: 5px;
       margin-bottom: 5px;
-      border-radius: 5px; }
+      border-radius: 5px;
+      cursor: pointer; }
     .reg-form-box .reg-form-ipt span a {
       color: #a7a7a7; }
       .reg-form-box .reg-form-ipt span a:hover {
