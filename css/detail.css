@@ -12,7 +12,8 @@
     border: 1px solid #e6e6e6; }
     .detail-container .detail-main .detail-main-l {
       float: left;
-      width: 480px; }
+      width: 480px;
+      position: relative; }
       .detail-container .detail-main .detail-main-l .detail-main-l-list {
         height: 420px;
         float: left;
@@ -28,21 +29,34 @@
         float: left;
         width: 400px;
         height: 400px;
-        background-color: darkgoldenrod;
-        position: relative; }
+        position: relative;
+        overflow: hidden; }
+        .detail-container .detail-main .detail-main-l .detail-main-l-spic img {
+          width: 400px;
+          height: 400px; }
         .detail-container .detail-main .detail-main-l .detail-main-l-spic .detail-main-l-zoom {
           position: absolute;
           width: 200px;
           height: 200px;
-          background-color: darkcyan;
-          opacity: .5; }
-        .detail-container .detail-main .detail-main-l .detail-main-l-spic .detail-main-l-bpic {
-          position: absolute;
-          width: 400px;
-          height: 400px;
-          background-color: darkgrey;
-          left: 400px;
-          display: none; }
+          background-color: #d6d6d6;
+          opacity: .5;
+          top: 0px;
+          display: none;
+          z-index: 1;
+          cursor: move; }
+      .detail-container .detail-main .detail-main-l .detail-main-l-bpic {
+        position: absolute;
+        width: 400px;
+        height: 400px;
+        left: 475px;
+        top: 0px;
+        display: none;
+        z-index: 1;
+        overflow: hidden; }
+        .detail-container .detail-main .detail-main-l .detail-main-l-bpic img {
+          width: 800px;
+          height: 800px;
+          position: absolute; }
     .detail-container .detail-main .detail-main-m {
       float: left;
       width: 500px;
