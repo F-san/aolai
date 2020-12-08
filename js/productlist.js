@@ -1,20 +1,15 @@
-/* 轮播 */
-var swiper = new Swiper('.swiper-container', {
-    slidesPerView: 1,
-    spaceBetween: 200,
-    loop: true,
-    pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-        renderBullet: function (index, className) {
-            return '<span class="' + className + '">' + (index + 1) + '</span>';
-        },
-    },
-    navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-    },
-});
+/* 商品列表 */
+$(function () {
+    $.ajax({
+        type: "GET",
+        url: "http://jx.xuzhixiang.top/ap/api/allproductlist.php?pagesize=20&pagenum=4",
+        success: function (res) {
+            console.log(res);
+            $('<div class="pro-main-r-one"><img src = "http://img1.aolaigo.com/group1/M00/53/71/CggUFl66EE-AcuZzAAB-IsjLdZY185=220x260.jpg"  alt = ""><div></div><p>¥328.00</p><span>${res.pname}</span></div >').appendTo(".pro-main-r-list");
+        }
+    });
+})
+
 /* 侧边栏 */
 $(function () {
     $(".sider-left").children("li").bind({
