@@ -125,13 +125,16 @@
     width: 100%;
     background-color: #c81417;
 }
-.top-main-nav ul li:first-child a span{
+
+.top-main-nav ul li:first-child a span {
     top: 32px;
 }
+
 .top-main-nav ul li:hover a span {
     top: 32px;
-   transition: all  ease-in .3s;
+    transition: all ease-in .3s;
 }
+
 .top-nav-select {
     line-height: 45px;
     font-size: 20px;
