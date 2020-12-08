@@ -102,10 +102,9 @@
 
 .top-main-nav {
     margin-left: 334px;
-    position: relative;
 }
 
-.top-main-nav li {
+.top-main-nav ul li {
     float: left;
     line-height: 45px;
     padding: 0 88px 0 17px;
@@ -113,12 +112,33 @@
     font-weight: 600;
 }
 
+.top-main-nav ul li a {
+    position: relative;
+}
+
+.top-main-nav ul li a span {
+    display: inline-block;
+    position: absolute;
+    top: 40px;
+    left: 0;
+    height: 5px;
+    width: 100%;
+    background-color: #c81417;
+}
+.top-main-nav ul li:first-child a span{
+    top: 32px;
+}
+.top-main-nav ul li:hover a span {
+    top: 32px;
+   transition: all  ease-in .3s;
+}
 .top-nav-select {
     line-height: 45px;
     font-size: 20px;
     font-weight: 600;
-    overflow: hidden;
     cursor: default;
+    position: relative;
+    width: 100px;
 }
 
 .top-nav-select img {
@@ -126,11 +146,103 @@
     vertical-align: middle;
 }
 
-.top-main-nav ul>li:first-child a::after {
-    height: 4px;
-    content: '';
+.top-nav-select .nav-select-main {
     position: absolute;
-    background: #C81417;
-    bottom: 0;
-    left: 0;
+    left: -830px;
+    width: 1140px;
+    height: 568px;
+    background: #fff;
+    z-index: 10;
+    margin-top: 0;
+    border: 1px solid #d1d1d1;
+    border-top: 0;
+    box-shadow: 0 0 20px rgba(0, 0, 0, .13);
+    border-radius: 0 0 8px 8px;
+    display: none;
+    overflow: hidden;
+}
+
+.top-nav-select:hover .nav-select-main {
+    display: block;
+}
+
+.nav-select-main .select-main-top {
+    width: 770px;
+    margin: 0 auto;
+    border-bottom: 1px solid #666;
+}
+
+.nav-select-main .select-main-top>li {
+    width: 76px;
+    height: 28px;
+    text-align: center;
+    line-height: 28px;
+    border: 1px solid #666;
+    border-radius: 6px;
+    margin: 20px 0 20px 70px;
+    font-size: 16px;
+    color: #333;
+    float: left;
+    cursor: pointer;
+    font-weight: normal;
+    padding: 0;
+}
+
+.nav-select-main .select-main-top>li:hover {
+    color: #c81417;
+    border-color: #c81417;
+}
+
+.nav-select-main h2 {
+    line-height: 90px;
+    text-align: center;
+    font-size: 24px;
+    color: #333;
+    font-weight: bold;
+}
+
+.nav-select-main ul .select-main-hot-box {
+    float: left;
+    color: #333;
+    width: 260px;
+    height: 69px;
+    padding: 0 5px 10px 20px;
+}
+
+.nav-select-main ul .select-main-hot-box a:hover {
+    color: #c81417;
+}
+
+.select-main-hot-box .select-main-hot-r p:nth-child(1) {
+    font-size: 18px;
+    line-height: 1;
+    margin-bottom: 16px;
+    width: 150px;
+    font-weight: normal;
+    margin-top: 10px;
+}
+
+.select-main-hot-box .select-main-hot-r p:nth-child(2) {
+    font-size: 15px;
+    line-height: 1;
+    width: 150px;
+    max-height: 30px;
+    overflow: hidden;
+    font-weight: normal;
+}
+
+.select-main-brand {}
+
+.select-main-brand a {
+    display: inline-block;
+    width: 130px;
+    height: 64px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.select-main-brand img {
+    width: 110px;
+    height: 62px;
+    border: 1px solid #D1D1D1;
 }
