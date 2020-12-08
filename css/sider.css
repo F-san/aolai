@@ -1,11 +1,7 @@
 .sider {
     position: fixed;
     top: 100px;
-<<<<<<< HEAD
-    right: -330px;
-=======
     right: -340px;
->>>>>>> index-dev
     width: 385px;
     height: 600px;
     z-index: 1;
