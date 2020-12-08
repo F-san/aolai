@@ -34,12 +34,13 @@
                     li {
                         margin-top: 10px;
 
+                        img {
+                            width: 62px;
+                            height: 62px;
+                        }
                     }
 
-                    img {
-                        width: 62px;
-                        height: 62px;
-                    }
+
                 }
             }
 
@@ -177,7 +178,7 @@
 
                 }
 
-                .datail-num-addcart {
+                .detail-num-addcart {
                     width: 140px;
                     height: 40px;
                     display: block;

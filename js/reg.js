@@ -55,7 +55,6 @@ $(function () {
                 "password": $("input").eq(1).val()
             },
             success: function (res) {
-                console.log(res);
                 alert(res.msg);
                 if (res.code == 1) {
                     location.href = 'login.html'

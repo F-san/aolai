@@ -1,11 +1,39 @@
 /* 商品列表 */
+
+// 添加商品
+/* $(".addpro input").eq(4).click(function () {
+    $.ajax({
+        type: "GET",
+        url: 'http://jx.xuzhixiang.top/ap/api/goods/goods-add.php',
+        data: {
+            pname: $(".addpro input").eq(0).val(),
+            pimg: $(".addpro input").eq(1).val(),
+            pprice: $(".addpro input").eq(2).val(),
+            pid: $(".addpro input").eq(3).val(),
+            uid: 45112
+        },
+        success: function (res) {
+            console.log(res);
+        }
+    })
+}) */
+
 $(function () {
     $.ajax({
         type: "GET",
-        url: "http://jx.xuzhixiang.top/ap/api/allproductlist.php?pagesize=20&pagenum=4",
+        url: "http://jx.xuzhixiang.top/ap/api/allproductlist.php",
+        data: {
+            uid: 45112
+        },
         success: function (res) {
-            console.log(res);
-            $('<div class="pro-main-r-one"><img src = "http://img1.aolaigo.com/group1/M00/53/71/CggUFl66EE-AcuZzAAB-IsjLdZY185=220x260.jpg"  alt = ""><div></div><p>¥328.00</p><span>${res.pname}</span></div >').appendTo(".pro-main-r-list");
+            console.log(res.data);
+            let arr = res.data;
+            for (let i = 0; i < arr.length; i++) {
+                $("<div class='pro-main-r-one'><a href='detail.html?id=" + arr[i].pid + "'><img src = '" + arr[i].pimg + "'alt = '' ><div><img src='" + arr[i].pimg + "'alt=''></div><p>$" + arr[i].pprice + "</p><span>" + arr[i].pname + "</span></a></div >").appendTo(".pro-main-r-list");
+            }
+            for (let i = 0; i < 4; i++) {
+                $("<li><div class= 'pro-hot-img fl'><img src='" + arr[i].pimg + "'alt=''></div><div class='pro-hot-msg fl'><p>" + arr[i].pname + "</p><p>￥" + arr[i].pprice + "</p><div>立即抢购</div></div></li>").appendTo(".pro-hot-r>ul");
+            }
         }
     });
 })

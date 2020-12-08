@@ -22,9 +22,9 @@
           width: 62px; }
           .detail-container .detail-main .detail-main-l .detail-main-l-list ul li {
             margin-top: 10px; }
-          .detail-container .detail-main .detail-main-l .detail-main-l-list ul img {
-            width: 62px;
-            height: 62px; }
+            .detail-container .detail-main .detail-main-l .detail-main-l-list ul li img {
+              width: 62px;
+              height: 62px; }
       .detail-container .detail-main .detail-main-l .detail-main-l-spic {
         float: left;
         width: 400px;
@@ -111,7 +111,7 @@
             .detail-container .detail-main .detail-main-m .datail-num .datail-num-choice2 .datail-num-change .num-change-minus:hover {
               color: #c81417;
               cursor: pointer; }
-        .detail-container .detail-main .detail-main-m .datail-num .datail-num-addcart {
+        .detail-container .detail-main .detail-main-m .datail-num .detail-num-addcart {
           width: 140px;
           height: 40px;
           display: block;
@@ -121,7 +121,7 @@
           line-height: 40px;
           font-weight: bold;
           margin-left: 10px; }
-          .detail-container .detail-main .detail-main-m .datail-num .datail-num-addcart:hover {
+          .detail-container .detail-main .detail-main-m .datail-num .detail-num-addcart:hover {
             background-color: #c81417;
             cursor: pointer; }
     .detail-container .detail-main .detail-main-m > p {

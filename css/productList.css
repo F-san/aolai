@@ -25,7 +25,7 @@
       float: left;
       margin-top: 10px;
       margin-left: 15px; }
-      .proList-container .pro-hot .pro-hot-r li .pro-hot-img {
+      .proList-container .pro-hot .pro-hot-r li .pro-hot-img img {
         width: 130px;
         height: 130px;
         border: 1px solid #e6e6e6;
@@ -151,8 +151,10 @@
           width: 70px;
           height: 37px;
           margin-top: 20px;
-          margin-left: 10px;
-          background-color: springgreen; }
+          margin-left: 10px; }
+          .proList-container .pro-main .pro-main-r .pro-main-r-list .pro-main-r-one div img {
+            width: 70px;
+            height: 37px; }
         .proList-container .pro-main .pro-main-r .pro-main-r-list .pro-main-r-one p {
           padding: 0px 4px;
           margin-top: 25px;

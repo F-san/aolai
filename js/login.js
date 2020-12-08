@@ -29,8 +29,15 @@ $(function () {
                 "password": $("input").eq(1).val()
             },
             success: function (res) {
-                // console.log(res);
                 alert(res.msg);
+                /* appid: ""
+                    id: "45112"
+                    identity: "0"
+                    is_delete: "0"
+                    password: "123456"
+                    status: "0"
+                    token: "acda5088b43df0530b97895b0ab4e79e"
+                    username: "111111" */
                 if (res.code == 1) {
                     location.href = 'index.html'
                 }
