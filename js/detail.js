@@ -1,4 +1,6 @@
 /* 商品详情 */
+// export { numMinus };
+
 $(function () {
     // 商品信息
     let str = location.search;
@@ -30,7 +32,6 @@ $(function () {
                 "pnum": 1
             },
             success: function (res) {
-                // console.log(res);
                 console.log(res);
             }
         })
@@ -38,40 +39,11 @@ $(function () {
     })
     //+1
     $(".num-change-plus").click(function () {
-        let pnum = parseInt($(".num-change").val()) + 1;
-        $.ajax({
-            type: "GET",
-            url: "http://jx.xuzhixiang.top/ap/api/cart-update-num.php",
-            data: {
-                "uid": 45112,
-                "pid": id,
-                "pnum": pnum
-            },
-            success: function (res) {
-                console.log(res);
-            }
-        })
-        updata();
+        numPlus();
     })
     // -1
     $(".num-change-minus").click(function () {
-        let pnum = parseInt($(".num-change").val()) - 1;
-        // Cannot read property '0' of undefined 错误，加判断不为空解决
-        if (pnum <= 1) {
-            pnum = 1;
-        }
-        $.ajax({
-            type: "GET",
-            url: "http://jx.xuzhixiang.top/ap/api/cart-update-num.php",
-            data: {
-                "uid": 45112,
-                "pid": id,
-                "pnum": pnum
-            },
-            success: function (res) {
-            }
-        })
-        updata();
+        numMinus();
     })
     // 购物车数据更新
     function updata() {
@@ -91,7 +63,43 @@ $(function () {
             }
         })
     }
-
+    //+1
+    function numPlus() {
+        let pnum = parseInt($(".num-change").val()) + 1;
+        $.ajax({
+            type: "GET",
+            url: "http://jx.xuzhixiang.top/ap/api/cart-update-num.php",
+            data: {
+                "uid": 45112,
+                "pid": id,
+                "pnum": pnum
+            },
+            success: function (res) {
+                console.log(res);
+            }
+        })
+        updata();
+    }
+    // -1
+    function numMinus() {
+        let pnum = parseInt($(".num-change").val()) - 1;
+        // Cannot read property '0' of undefined 错误，加判断不为空解决
+        if (pnum <= 1) {
+            pnum = 1;
+        }
+        $.ajax({
+            type: "GET",
+            url: "http://jx.xuzhixiang.top/ap/api/cart-update-num.php",
+            data: {
+                "uid": 45112,
+                "pid": id,
+                "pnum": pnum
+            },
+            success: function (res) {
+            }
+        })
+        updata();
+    }
     // 放大镜
     function zoom() {
         $(".detail-main-l-spic").mouseover(function () {
