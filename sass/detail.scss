@@ -21,6 +21,7 @@
         .detail-main-l {
             float: left;
             width: 480px;
+            position: relative;
 
             .detail-main-l-list {
                 height: 420px;
@@ -46,24 +47,41 @@
                 float: left;
                 width: 400px;
                 height: 400px;
-                background-color: darkgoldenrod;
                 position: relative;
+                overflow: hidden;
+
+                img {
+                    width: 400px;
+                    height: 400px;
+                }
 
                 .detail-main-l-zoom {
                     position: absolute;
                     width: 200px;
                     height: 200px;
-                    background-color: darkcyan;
+                    background-color: #d6d6d6;
                     opacity: .5;
-                }
-
-                .detail-main-l-bpic {
-                    position: absolute;
-                    width: 400px;
-                    height: 400px;
-                    background-color: darkgrey;
-                    left: 400px;
+                    top: 0px;
                     display: none;
+                    z-index: 1;
+                    cursor: move;
+                }
+            }
+
+            .detail-main-l-bpic {
+                position: absolute;
+                width: 400px;
+                height: 400px;
+                left: 475px;
+                top: 0px;
+                display: none;
+                z-index: 1;
+                overflow: hidden;
+
+                img {
+                    width: 800px;
+                    height: 800px;
+                    position: absolute;
                 }
             }
         }
