@@ -1,6 +1,4 @@
 /* 商品详情 */
-// export { numMinus };
-
 $(function () {
     // 商品信息
     let str = location.search;
@@ -13,10 +11,16 @@ $(function () {
             "id": id
         },
         success: function (res) {
-            console.log(res);
             let arr = res.data;
+            let str = "";
+            $(arr).each(function (i) {
+                str += `
+                <p>${arr.pname}</p>
+                <div class="detail-prcie"><span>奥莱价：</span><span>￥${arr.pprice}</span></div>
+                `;
+            })
             $("<li><img src='" + arr.pimg + "' alt = ''></li >").appendTo(".detail-main-l-list>ul");
-            $(".detail-main-m").prepend("<p>" + arr.pname + "</p><div class= 'detail-prcie' ><span>奥莱价：</span><span>￥" + arr.pprice + "</span></div>");
+            $(".detail-main-m").prepend(str);
             zoom();
         }
     })
@@ -31,19 +35,18 @@ $(function () {
                 "pid": id,
                 "pnum": 1
             },
-            success: function (res) {
-                console.log(res);
-            }
         })
         updata();
     })
     //+1
     $(".num-change-plus").click(function () {
-        numPlus();
+        let pnum = parseInt($(".num-change").val()) + 1;
+        numPlus(pnum);
     })
     // -1
     $(".num-change-minus").click(function () {
-        numMinus();
+        let pnum = parseInt($(".num-change").val()) - 1;
+        numMinus(pnum);
     })
     // 购物车数据更新
     function updata() {
@@ -54,18 +57,17 @@ $(function () {
                 "id": 45112
             },
             success: function (res) {
-                for (let i = 0; i < res.data.length; i++) {
-                    if (res.data[i].pid == id) {
-                        $(".num-change").val(res.data[i].pnum)
-                    }
-                }
+                    $(res.data).each((i) => {
+                        if (res.data[i].pid == id) {
+                            $(".num-change").val(res.data[i].pnum)
+                        }
+                    })
                 console.log(res);
             }
         })
     }
     //+1
-    function numPlus() {
-        let pnum = parseInt($(".num-change").val()) + 1;
+    function numPlus(pnum) {
         $.ajax({
             type: "GET",
             url: "http://jx.xuzhixiang.top/ap/api/cart-update-num.php",
@@ -73,16 +75,12 @@ $(function () {
                 "uid": 45112,
                 "pid": id,
                 "pnum": pnum
-            },
-            success: function (res) {
-                console.log(res);
             }
         })
         updata();
     }
     // -1
-    function numMinus() {
-        let pnum = parseInt($(".num-change").val()) - 1;
+    function numMinus(pnum) {
         // Cannot read property '0' of undefined 错误，加判断不为空解决
         if (pnum <= 1) {
             pnum = 1;
@@ -94,8 +92,6 @@ $(function () {
                 "uid": 45112,
                 "pid": id,
                 "pnum": pnum
-            },
-            success: function (res) {
             }
         })
         updata();

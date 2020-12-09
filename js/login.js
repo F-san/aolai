@@ -17,8 +17,6 @@ $(function () {
                     break;
             }
         })
-
-
     }
     $("button").click(function () {
         $.ajax({
@@ -46,7 +44,5 @@ $(function () {
                 console.log(err);
             }
         });
-
     })
-
 })

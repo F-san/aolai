@@ -17,7 +17,6 @@
         }
     })
 }) */
-
 $(function () {
     $.ajax({
         type: "GET",
@@ -28,12 +27,38 @@ $(function () {
         success: function (res) {
             console.log(res.data);
             let arr = res.data;
-            for (let i = 0; i < arr.length; i++) {
-                $("<div class='pro-main-r-one'><a href='detail.html?id=" + arr[i].pid + "'><img src = '" + arr[i].pimg + "'alt = '' ><div><img src='" + arr[i].pimg + "'alt=''></div><p>$" + arr[i].pprice + "</p><span>" + arr[i].pname + "</span></a></div >").appendTo(".pro-main-r-list");
-            }
+            let str1 = "";
+            let str2 = "";
+            $(arr).each(function (i) {
+                str1 += `
+                     <div class="pro-main-r-one">
+                     <a href='detail.html?id=${arr[i].pid}'>
+                        <img src="${arr[i].pimg}"
+                            alt="">
+                        <div><img src='${arr[i].pimg}'alt=''></div>
+                        <p>¥${arr[i].pprice}</p>
+                        <span>${arr[i].pname}</span>
+                    </a>
+                    </div>
+                `;
+            })
             for (let i = 0; i < 4; i++) {
-                $("<li><div class= 'pro-hot-img fl'><img src='" + arr[i].pimg + "'alt=''></div><div class='pro-hot-msg fl'><p>" + arr[i].pname + "</p><p>￥" + arr[i].pprice + "</p><div>立即抢购</div></div></li>").appendTo(".pro-hot-r>ul");
+                str2 += `
+                    <li>
+                        <div class="pro-hot-img fl">
+                            <img src="${arr[i].pimg}"
+                                alt="">
+                        </div>
+                        <div class="pro-hot-msg fl">
+                            <p>${arr[i].pname}</p>
+                            <p>￥${arr[i].pprice}</p>
+                            <div>立即抢购</div>
+                        </div>
+                    </li>
+                `;
             }
+            $(str1).appendTo(".pro-main-r-list");
+            $(str2).appendTo(".pro-hot-r>ul");
         }
     });
 })

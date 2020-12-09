@@ -1,7 +1,4 @@
 /* 注册 */
-/* let ipts = document.querySelectorAll("input");
-
-let iptTexts = document.querySelectorAll(".ipt-check"); */
 $(function () {
     for (let i = 0; i < $(".ipt-check").length; i++) {
         $("input").eq(i).focus(function () {
