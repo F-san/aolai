@@ -25,10 +25,10 @@ $(function () {
             uid: 45112
         },
         success: function (res) {
-            console.log(res.data);
             let arr = res.data;
             let str1 = "";
             let str2 = "";
+            let str3 = "";
             $(arr).each(function (i) {
                 str1 += `
                      <div class="pro-main-r-one">
@@ -56,11 +56,59 @@ $(function () {
                         </div>
                     </li>
                 `;
+                str3 += `
+                <li><img src="${arr[i].pimg}"
+                            alt="">
+                        <p>${arr[i].pname}</p>
+                        <p>¥${arr[i].pprice}</p>
+                </li>
+                `;
             }
             $(str1).appendTo(".pro-main-r-list");
             $(str2).appendTo(".pro-hot-r>ul");
+            $(str3).appendTo(".pro-main-l-ul");
         }
     });
+    updata();
+    // 购物车数据更新
+    function updata() {
+        $.ajax({
+            type: "GET",
+            url: "http://jx.xuzhixiang.top/ap/api/cart-list.php",
+            data: {
+                "id": 45112
+            },
+            success: function (res) {
+                let data = res.data;
+                navNemb(data);
+            }
+        })
+    }
+    // 导航数字
+    function navNemb(data) {
+        let num = 0;
+        $(data).each(function (i) {
+            num += parseInt(data[i].pnum);
+        })
+        $(".cart-number").html(num);
+    }
+    $(".pro-sort div").click(function () {
+        let str = "";
+        for (let i = 0; i < 4; i++) {
+            str += `
+                <li>
+                    <p>品牌：</p>
+                    <dl>
+                        <dd> <a href="#">穆克</a> </dd>
+                        <dd> <a href="#">繁华造物</a> </dd>
+                        <dd> <a href="#">克莱</a></dd>
+                        <dd> <a href="#">朵颐</a></dd>
+                    </dl>
+                </li>
+            `;
+        }
+        $(str).appendTo($(".pro-sort ul"));
+    })
 })
 
 /* 侧边栏 */

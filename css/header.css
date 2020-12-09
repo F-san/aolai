@@ -115,7 +115,9 @@
 .top-main-nav ul li a {
     position: relative;
 }
-
+.top-main-nav ul li a:hover{
+    color: #c81417;
+}
 .top-main-nav ul li a span {
     display: inline-block;
     position: absolute;

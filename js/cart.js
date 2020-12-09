@@ -8,7 +8,6 @@ $(function () {
         },
         success: function (res) {
             let data = res.data;
-            console.log(data);
             let str = "";
             $(data).each(function (i) {
                 str += `
@@ -32,6 +31,7 @@ $(function () {
                     `;
             })
             $(str).appendTo($(".cart-container-main table"));
+            navNemb();
             // -
             $(".cart-change-num>span:first-child").click(function () {
                 let i = $(this).parent().attr("data-i");
@@ -43,6 +43,7 @@ $(function () {
                 numMinus(id, pnum);
                 $(this).next().val(pnum);
                 $(this).parent().parent().next().next().html("￥" + data[i].pprice * pnum);
+                navNemb();
             })
             // +
             $(".cart-change-num>span:last-child").click(function () {
@@ -52,6 +53,7 @@ $(function () {
                 numPlus(id, pnum);
                 $(this).prev().val(pnum);
                 $(this).parent().parent().next().next().html("￥" + data[i].pprice * pnum);
+                navNemb();
             })
 
             // 全选框
@@ -89,6 +91,7 @@ $(function () {
                     let pid = $(this).attr("data-id");
                     cartDel(pid);
                     $(this).parent().remove();
+                    navNemb();
                 })
             })
             // 批量删除
@@ -100,6 +103,7 @@ $(function () {
                         $(this).parent().parent().remove();
                         $(".numPrice").html(0);
                     }
+                    navNemb();
                 })
             })
             // 计算总价
@@ -122,9 +126,19 @@ $(function () {
                         "pid": pid
                     },
                 })
+                
             }
+
         }
     })
+    // 导航数字
+    function navNemb() {
+        let num = 0;
+        $(".num-change").each(function () {
+            num += parseInt($(this).val());
+        })
+        $(".cart-number").html(num);
+    }
     //+1
     function numPlus(id, pnum) {
         $.ajax({

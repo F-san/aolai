@@ -84,6 +84,10 @@
       color: #fb5053;
       padding-left: 40px;
       font-weight: bold; }
+    .proList-container .pro-sort div {
+      width: 100%;
+      text-align: center;
+      cursor: pointer; }
   .proList-container .pro-main {
     width: 100%; }
     .proList-container .pro-main .pro-main-l {
@@ -103,24 +107,29 @@
       .proList-container .pro-main .pro-main-l ul {
         padding: 0 24px;
         margin-top: 10px; }
-        .proList-container .pro-main .pro-main-l ul li p:nth-child(2) {
-          color: #333;
-          height: 20px;
-          display: block;
-          line-height: 20px;
-          margin-top: 10px;
-          white-space: nowrap;
-          text-overflow: ellipsis;
-          overflow: hidden;
-          text-align: left; }
-        .proList-container .pro-main .pro-main-l ul li p:nth-child(3) {
-          color: #ff3344;
-          font-weight: bold;
-          height: 20px;
-          line-height: 20px;
-          margin-top: 5px;
-          text-align: center;
-          font-size: 16px; }
+        .proList-container .pro-main .pro-main-l ul li {
+          margin-top: 10px; }
+          .proList-container .pro-main .pro-main-l ul li img {
+            width: 140px;
+            height: 140px; }
+          .proList-container .pro-main .pro-main-l ul li p:nth-child(2) {
+            color: #333;
+            height: 20px;
+            display: block;
+            line-height: 20px;
+            margin-top: 10px;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            text-align: left; }
+          .proList-container .pro-main .pro-main-l ul li p:nth-child(3) {
+            color: #ff3344;
+            font-weight: bold;
+            height: 20px;
+            line-height: 20px;
+            margin-top: 5px;
+            text-align: center;
+            font-size: 16px; }
     .proList-container .pro-main .pro-main-r {
       width: 1000px; }
       .proList-container .pro-main .pro-main-r .pro-main-r-top {

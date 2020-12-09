@@ -1,6 +1,8 @@
 /* 注册 */
 $(function () {
-    for (let i = 0; i < $(".ipt-check").length; i++) {
+    let flag1 = 0;
+    let flag2 = 0;
+    $(".ipt-check").each(function (i) {
         $("input").eq(i).focus(function () {
             switch (i) {
                 case 0:
@@ -12,7 +14,13 @@ $(function () {
                 case 1:
                     $(".ipt-check").eq(i).text("6-20位字符，可使用字母，数字或字符组合");
                     $(this).blur(function () {
-                        $(".ipt-check").eq(i).text("");
+                        if ((/^[a-z0-9_-]{6,20}$/).test($(this).val())
+                        ) {
+                            $(".ipt-check").eq(i).css("color", "#000").text("");
+                            flag1 = 1;
+                        } else {
+                            $(".ipt-check").eq(i).css("color", "red").text("请输入正确的密码！");
+                        }
                     });
                     break;
                 case 2:
@@ -20,7 +28,8 @@ $(function () {
                     $(this).blur(function () {
                         if ((/^[a-z0-9_-]{6,20}$/).test($(this).val())
                         ) {
-                            $(".ipt-check").eq(i).text("");
+                            $(".ipt-check").eq(i).css("color", "#000").text("");
+                            flag2 = 1;
                         } else {
                             $(".ipt-check").eq(i).css("color", "red").text("请输入正确的密码！");
                         }
@@ -40,10 +49,15 @@ $(function () {
                     break;
             }
         })
-
-
-    }
+    })
     $("button").click(function () {
+        if (flag1 == 1 && flag2 == 1) {
+            doReg();
+        } else {
+            alert("请输入正确格式的密码！");
+        }
+    })
+    function doReg() {
         $.ajax({
             type: "GET",
             url: "http://jx.xuzhixiang.top/ap/api/reg.php",
@@ -61,7 +75,6 @@ $(function () {
                 console.log(err);
             }
         });
-
-    })
+    }
 
 })

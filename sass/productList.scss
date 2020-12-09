@@ -124,6 +124,12 @@
             padding-left: 40px;
             font-weight: bold;
         }
+
+        div {
+            width: 100%;
+            text-align: center;
+            cursor: pointer;
+        }
     }
 
     .pro-main {
@@ -144,8 +150,6 @@
                 line-height: 40px;
                 color: #c71417;
                 font-weight: bold;
-
-
             }
 
             ul {
@@ -153,6 +157,13 @@
                 margin-top: 10px;
 
                 li {
+                    margin-top: 10px;
+
+                    img {
+                        width: 140px;
+                        height: 140px;
+                    }
+
                     p {
                         &:nth-child(2) {
                             color: #333;

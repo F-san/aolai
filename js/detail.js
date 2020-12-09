@@ -1,5 +1,6 @@
 /* 商品详情 */
 $(function () {
+
     // 商品信息
     let str = location.search;
     //获取商品id
@@ -13,40 +14,51 @@ $(function () {
         success: function (res) {
             let arr = res.data;
             let str = "";
-            $(arr).each(function (i) {
+            $(arr).each(function () {
                 str += `
                 <p>${arr.pname}</p>
                 <div class="detail-prcie"><span>奥莱价：</span><span>￥${arr.pprice}</span></div>
                 `;
             })
-            $("<li><img src='" + arr.pimg + "' alt = ''></li >").appendTo(".detail-main-l-list>ul");
+            for (let i = 0; i < 5; i++) {
+                $("<li><img src='" + arr.pimg + "' alt = ''></li >").appendTo(".detail-main-l-list>ul");
+            }
             $(".detail-main-m").prepend(str);
             zoom();
+            updata();
         }
     })
-    updata();
+
     // 加入购物车
     $(".detail-num-addcart").click(function () {
+        let pnum = $(".num-change").val();
         $.ajax({
             type: "GET",
             url: "http://jx.xuzhixiang.top/ap/api/add-product.php",
             data: {
                 "uid": 45112,
                 "pid": id,
-                "pnum": 1
+                "pnum": pnum
             },
+            success: function () {
+                updata();
+            }
         })
-        updata();
+
     })
     //+1
     $(".num-change-plus").click(function () {
         let pnum = parseInt($(".num-change").val()) + 1;
-        numPlus(pnum);
+        $(".num-change").val(pnum);
     })
     // -1
     $(".num-change-minus").click(function () {
         let pnum = parseInt($(".num-change").val()) - 1;
-        numMinus(pnum);
+        // Cannot read property '0' of undefined 错误，加判断不为空解决
+        if (pnum <= 1) {
+            pnum = 1;
+        }
+        $(".num-change").val(pnum);
     })
     // 购物车数据更新
     function updata() {
@@ -57,44 +69,19 @@ $(function () {
                 "id": 45112
             },
             success: function (res) {
-                    $(res.data).each((i) => {
-                        if (res.data[i].pid == id) {
-                            $(".num-change").val(res.data[i].pnum)
-                        }
-                    })
-                console.log(res);
+                console.log(res.data);
+                let data = res.data;
+                navNemb(data);
             }
         })
     }
-    //+1
-    function numPlus(pnum) {
-        $.ajax({
-            type: "GET",
-            url: "http://jx.xuzhixiang.top/ap/api/cart-update-num.php",
-            data: {
-                "uid": 45112,
-                "pid": id,
-                "pnum": pnum
-            }
+    // 导航数字
+    function navNemb(data) {
+        let num = 0;
+        $(data).each(function (i) {
+            num += parseInt(data[i].pnum);
         })
-        updata();
-    }
-    // -1
-    function numMinus(pnum) {
-        // Cannot read property '0' of undefined 错误，加判断不为空解决
-        if (pnum <= 1) {
-            pnum = 1;
-        }
-        $.ajax({
-            type: "GET",
-            url: "http://jx.xuzhixiang.top/ap/api/cart-update-num.php",
-            data: {
-                "uid": 45112,
-                "pid": id,
-                "pnum": pnum
-            }
-        })
-        updata();
+        $(".cart-number").html(num);
     }
     // 放大镜
     function zoom() {
@@ -138,6 +125,10 @@ $(function () {
         //3.图片相同
         $(".detail-main-l-spic img").attr("src", $(".detail-main-l-list ul li img").attr("src"));
         $(".detail-main-l-bpic img").attr("src", $(".detail-main-l-spic img").attr("src"));
+        $(".detail-main-l-list ul li img").mouseover(function () {
+            $(".detail-main-l-spic img").attr("src", $(this).attr("src"));
+            $(".detail-main-l-bpic img").attr("src", $(".detail-main-l-spic img").attr("src"));
+        })
     }
 
 })

@@ -17,6 +17,7 @@ var swiper = new Swiper('.swiper-container', {
 });
 /* 侧边栏 */
 $(function () {
+    
     $(".sider-left").children("li").bind({
         mouseover: function () {
             $(this).children(".sider-i-text").stop().animate({
@@ -55,4 +56,30 @@ $(function () {
             scrollTop: 0
         })
     })
+    updata();
+    // 购物车数据更新
+    function updata() {
+        $.ajax({
+            type: "GET",
+            url: "http://jx.xuzhixiang.top/ap/api/cart-list.php",
+            data: {
+                "id": 45112
+            },
+            success: function (res) {
+                console.log(res.data);
+                let data = res.data;
+                navNemb(data);
+            }
+        })
+    }
+    // 导航数字
+    function navNemb(data) {
+        let num = 0;
+        $(data).each(function (i) {
+            num += parseInt(data[i].pnum);
+        })
+        $(".cart-number").html(num);
+    }
 })
+
+
