@@ -36,8 +36,11 @@ $(function () {
                     status: "0"
                     token: "acda5088b43df0530b97895b0ab4e79e"
                     username: "111111" */
+                console.log(res);
                 if (res.code == 1) {
-                    location.href = 'index.html'
+                    location.href = 'index.html';
+                    localStorage.setItem('uid', res.data.id);
+                    localStorage.setItem('token', res.data.token);
                 }
             },
             error: function (err) {

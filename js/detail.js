@@ -5,6 +5,7 @@ $(function () {
     let str = location.search;
     //获取商品id
     let id = str.replace(/[^0-9]/ig, "");
+    let uid = localStorage.getItem("uid");
     $.ajax({
         type: "GET",
         url: "http://jx.xuzhixiang.top/ap/api/detail.php",
@@ -36,7 +37,7 @@ $(function () {
             type: "GET",
             url: "http://jx.xuzhixiang.top/ap/api/add-product.php",
             data: {
-                "uid": 45112,
+                "uid": uid,
                 "pid": id,
                 "pnum": pnum
             },
@@ -66,7 +67,7 @@ $(function () {
             type: "GET",
             url: "http://jx.xuzhixiang.top/ap/api/cart-list.php",
             data: {
-                "id": 45112
+                "id": uid
             },
             success: function (res) {
                 console.log(res.data);

@@ -63,6 +63,7 @@
 
 .container-main img {
     height: 594px;
+    margin: auto;
 }
 
 /* 搜索框 */
@@ -91,6 +92,7 @@
     height: 100%;
     color: #666666;
 }
-.search-ul li:hover{
+
+.search-ul li:hover {
     background-color: #ffdfc6;
 }

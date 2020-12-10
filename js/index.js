@@ -3,6 +3,10 @@ var swiper = new Swiper('.swiper-container', {
     slidesPerView: 1,
     spaceBetween: 200,
     loop: true,
+    autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+    },
     pagination: {
         el: '.swiper-pagination',
         clickable: true,
@@ -17,6 +21,7 @@ var swiper = new Swiper('.swiper-container', {
 });
 
 $(function () {
+    let uid = localStorage.getItem("uid");
     /* 侧边栏 */
     $(".sider-left").children("li").bind({
         mouseover: function () {
@@ -64,7 +69,7 @@ $(function () {
             type: "GET",
             url: "http://jx.xuzhixiang.top/ap/api/cart-list.php",
             data: {
-                "id": 45112
+                "id": uid
             },
             success: function (res) {
                 let data = res.data;

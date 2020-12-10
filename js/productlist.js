@@ -18,11 +18,12 @@
     })
 }) */
 $(function () {
+    let uid = localStorage.getItem("uid");
     $.ajax({
         type: "GET",
         url: "http://jx.xuzhixiang.top/ap/api/allproductlist.php",
         data: {
-            uid: 45112
+            uid: uid
         },
         success: function (res) {
             let arr = res.data;
@@ -76,7 +77,7 @@ $(function () {
             type: "GET",
             url: "http://jx.xuzhixiang.top/ap/api/cart-list.php",
             data: {
-                "id": 45112
+                "id": uid
             },
             success: function (res) {
                 let data = res.data;
