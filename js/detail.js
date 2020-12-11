@@ -131,7 +131,7 @@ $(function () {
             $(".detail-main-l-bpic img").attr("src", $(".detail-main-l-spic img").attr("src"));
         })
     }
-
+    
 })
 
 /* 侧边栏 */

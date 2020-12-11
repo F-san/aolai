@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>购物车</title>
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../fonts/iconfont.css">
+    <link rel="stylesheet" href="../css/cart.css">
+    <script src="../js/jQuery.js"></script>
+</head>
+
+<body>
+    <div id="top-wrapper">
+        <div class="top clean">
+            <ul class="top-left fl">
+                <li><a href="#">奥特莱斯购物中心</a>
+                    <ul class="top-sec-nav">
+                        <li><a href="#">深圳华盛奥特莱斯</a></li>
+                        <li><a href="#">深圳华盛奥特莱斯</a></li>
+                        <li><a href="#">深圳华盛奥特莱斯</a></li>
+                        <li><a href="#">深圳华盛奥特莱斯</a></li>
+                        <li><a href="#">深圳华盛奥特莱斯</a></li>
+                        <li><a href="#">深圳华盛奥特莱斯</a></li>
+                        <li><a href="#">深圳华盛奥特莱斯</a></li>
+                        <li><a href="#">深圳华盛奥特莱斯</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">商家入驻</a></li>
+            </ul>
+            <ul class="top-right fr">
+                <li>您好，欢迎来到奥莱购</li>
+                <li><a href="login.html">请登录</a></li>
+                <li><a href="register.html">免费注册</a></li>
+                <li>
+                    <span class="iconfont icon-che-copy"></span>
+                    <a href="cart.html"> 购物车</a>
+                    <span class="cart-number">0</span>
+                </li>
+                <li><a href="#">订单查询</a></li>
+                <li><a href="productList.html">我的收藏</a></li>
+                <li><a href="#">帮助中心</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="top-main">
+        <div class="top-main-logo clean">
+            <a href="index.html"><img class="fl"
+                    src="http://img1.aolaigo.com/group1/M00/2B/EE/CggUF1mgDUCAHcWmAAAaPIY0xT4626.png" alt=""></a>
+            <div class="cart-top-text">购物车</div>
+        </div>
+    </div>
+    <div class="cart-container">
+        <div class="cart-container-top">
+            <!-- <span> 购物车</span> -->
+            <table>
+                <tr>
+                    <td width="60">全选</td>
+                    <td width="540">商品信息</td>
+                    <td width="120">单价</td>
+                    <td width="120">数量</td>
+                    <td width="120">优惠</td>
+                    <td width="120">小计</td>
+                    <td width="120">操作</td>
+                </tr>
+            </table>
+
+        </div>
+        <div class="cart-container-main">
+            <table>
+                <!--                 <tr>
+                    <td width='60'><input type='checkbox'></td>
+                    <td width='540'>
+                        <img src='http://img1.aolaigo.com/group1/M00/53/7A/CggUF16_Yh-AMSmYAACRaKt5yhY350=200x200.jpg'
+                            alt=''>
+                        <p>商品名称</p>
+                    </td>
+                    <td width='120'>单价</td>
+                    <td width='120'>
+                        <div class='cart-change-num'>
+                            <span>-</span><input type='text' value='1'><span>+</span>
+                        </div>
+                    </td>
+                    <td width='120'>优惠</td>
+                    <td width='120' class='cart-sprice'>小计</td>
+                    <td width='120' class='cart-del'>删除</td>
+                </tr> -->
+            </table>
+        </div>
+    </div>
+    <div class="cart-container-buttom clean">
+        <div class="fl">
+            <input class="checkAll" type="checkbox"><span>全选</span>
+        </div>
+        <p class="cart-delAll">删除</p>
+        <div class="cart-buttom-all">
+            <span>总计：</span><span class="numPrice">0</span>
+            <button>去结算</button>
+        </div>
+
+    </div>
+    <div id="footer-warpper">
+        <div class="footer">
+            <ul class="footer-top">
+                <li>
+                    <div class="footer-top-l fl"><span class="iconfont icon-zheng"></span></div>
+
+                    <div class="footer-top-l">
+                        <p>100%</p>
+                        <p>正品保证</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="footer-top-l fl"><span class="iconfont icon-zheng"></span></div>
+
+                    <div class="footer-top-l">
+                        <p>100%</p>
+                        <p>正品保证</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="footer-top-l fl"><span class="iconfont icon-zheng"></span></div>
+
+                    <div class="footer-top-l">
+                        <p>100%</p>
+                        <p>正品保证</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="footer-top-l fl"><span class="iconfont icon-zheng"></span></div>
+
+                    <div class="footer-top-l">
+                        <p>100%</p>
+                        <p>正品保证</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="footer-top-l fl"><span class="iconfont icon-zheng"></span></div>
+
+                    <div class="footer-top-l">
+                        <p>100%</p>
+                        <p>正品保证</p>
+                    </div>
+                </li>
+            </ul>
+            <div class="footer-middle clean">
+                <div class="foooter-mid-tel fl">
+                    <div class="foooter-mid-chat clean">
+                        <div class="fl">
+                            <span class="iconfont icon-weibo"></span>
+                            <p>微博</p>
+                        </div>
+                        <div class="fr wechat">
+                            <span class="iconfont icon-weixin1"></span>
+                            <p>微信</p>
+                            <div class="chatcode">
+                                <img src="http://img1.aolaigo.com/group1/M00/19/5D/CggUFli-U7GAXeDUAAA9QuMVW-Y856.png"
+                                    alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer-phone">
+                        <p>客服热线:</p>
+                        <ul>
+                            <li>400-116-1188</li>
+                            <li>0755-2843555</li>
+                        </ul>
+                    </div>
+                    <p>周一至周日：09:00-22:00</p>
+                </div>
+                <span></span>
+                <dl>
+                    <dt>购物指南</dt>
+                    <dd><a href="#">购物流程</a></dd>
+                    <dd><a href="#">用户注册</a></dd>
+                    <dd><a href="#">提交订单</a></dd>
+                    <dd><a href="#">找回密码</a></dd>
+                    <dd><a href="#">常见问题</a></dd>
+                </dl>
+                <span></span>
+                <dl>
+                    <dt>购物指南</dt>
+                    <dd><a href="#">购物流程</a></dd>
+                    <dd><a href="#">用户注册</a></dd>
+                    <dd><a href="#">提交订单</a></dd>
+                    <dd><a href="#">找回密码</a></dd>
+                    <dd><a href="#">常见问题</a></dd>
+                </dl>
+                <span></span>
+                <dl>
+                    <dt>购物指南</dt>
+                    <dd><a href="#">购物流程</a></dd>
+                    <dd><a href="#">用户注册</a></dd>
+                    <dd><a href="#">提交订单</a></dd>
+                    <dd><a href="#">找回密码</a></dd>
+                    <dd><a href="#">常见问题</a></dd>
+                </dl>
+                <span></span>
+                <dl>
+                    <dt>购物指南</dt>
+                    <dd><a href="#">购物流程</a></dd>
+                    <dd><a href="#">用户注册</a></dd>
+                    <dd><a href="#">提交订单</a></dd>
+                    <dd><a href="#">找回密码</a></dd>
+                    <dd><a href="#">常见问题</a></dd>
+                </dl>
+                <span></span>
+                <div class="foooter-mid-pic fl">
+                    <img src="http://img1.aolaigo.com/group1/M00/19/59/CggUF1i-UIiAUQhCAAIKjh5na7w500.gif" alt="">
+                </div>
+            </div>
+            <div class="footer-buttom">
+                <ul class="footer-buttom-list">
+                    <li><a href="#">关于奥莱购</a></li>
+                    <span>|</span>
+                    <li><a href="#">联系我们</a></li>
+                    <span>|</span>
+                    <li><a href="#">诚聘英才</a></li>
+                    <span>|</span>
+                    <li><a href="#">商务合作</a></li>
+                    <span>|</span>
+                    <li><a href="#">友情链接</a></li>
+                    <span>|</span>
+                    <li><a href="#">华南城网</a></li>
+                    <span>|</span>
+                    <li><a href="#">华盛Outlets</a></li>
+                </ul>
+                <p>Copyright © 2013-2016 深圳华盛电子商务有限公司 粤ICP备16081451-1号 All Right</p>
+                <p>深圳市龙岗区平湖华南城1号交易广场4楼奥莱购（深圳华盛电子商务有限公司）</p>
+                <p> <img src="http://cms.aolaigo.com/Images/gabat.png" alt=""
+                        style="display: inline-block;vertical-align: middle;"> 粤公网安备 44030702000487号</p>
+            </div>
+        </div>
+    </div>
+    <script src="../js/cart.js"></script>
+</body>
+
+</html>
